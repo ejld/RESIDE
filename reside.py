@@ -1022,7 +1022,7 @@ if __name__ == "__main__":
     parser.add_argument('-gpu', dest="gpu", default='0', help='GPU to use')
     parser.add_argument('-nGate', dest="wGate", action='store_false', help='Include edgewise-gating in GCN')
 
-    parser.add_argument('-lstm_dim', dest="lstm_dim", default=192, type=int, help='Hidden state dimension of Bi-LSTM')
+    parser.add_argument('-lstm_dim', dest="lstm_dim", default=32, type=int, help='Hidden state dimension of Bi-LSTM')#changed from 192
     parser.add_argument('-pos_dim', dest="pos_dim", default=16, type=int, help='Dimension of positional embeddings')
     parser.add_argument('-type_dim', dest="type_dim", default=50, type=int, help='Type dimension')
     parser.add_argument('-alias_dim', dest="alias_dim", default=32, type=int, help='Alias dimension')
@@ -1038,7 +1038,7 @@ if __name__ == "__main__":
     parser.add_argument('-l2', dest="l2", default=0.001, type=float, help='L2 regularization')
     parser.add_argument('-epoch', dest="max_epochs", default=2, type=int, help='Max epochs')
     parser.add_argument('-batch', dest="batch_size", default=1, type=int, help='Batch size')  # changed from 32
-    parser.add_argument('-chunk', dest="chunk_size", default=100, type=int, help='Chunk size') #changed from 1000
+    parser.add_argument('-chunk', dest="chunk_size", default=1000, type=int, help='Chunk size')  # changed from 1000
     parser.add_argument('-restore', dest="restore", action='store_true',
                         help='Restore from the previous best saved model')
     parser.add_argument('-only_eval', dest="only_eval", action='store_true',
